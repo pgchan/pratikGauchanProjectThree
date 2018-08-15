@@ -4,3 +4,11 @@
 @import "partials/_header.scss";
 @import "partials/_footer.scss";
 
+
+.pizza-size {
+    display: flex;
+}
+
+.pizza-size-contents {
+    flex: 1 0 30%;
+}
