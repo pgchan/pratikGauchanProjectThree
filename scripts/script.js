@@ -1,30 +1,3 @@
-/*
-
-empty cart variable array that holds all the selected items.
-    - price adds all the indexes inside the array
-    - cart dynamically shows the number of items in basket (array.length)
-
-1. section - select pizza
-    on click, select one pizza. if pizza:selected is not equal to one, show error sign "please select a pizza to continue" on checkout
-
-2. section - select cheese
-    on click, select any number of cheeses. 
-
-3. section - select veggies
-    on click, select any number of veggies.
-
-4. section - select meat
-    on click, select any number of meat. 
-
-5. section - submit
-
-
-*/
-
-
-
-
-
 const menu = {}
 
 menu.size = {
@@ -33,11 +6,22 @@ menu.size = {
     large: 11.50,
 }
 
-// menu.cheeseTopping = {
-//     feta: 2,
-//     goat: 2,
-//     mozzarella: 2,
-// }
+menu.cheese = {
+    feta: 2,
+    goat: 2,
+    mozzarella: 2,
+}
+
+menu.vegetables = {
+    artichokes: 1.5,
+    blackOlives: 1.5,
+    broccolli: 1.5,
+    mushrooms: 1.5,
+    romaTomato: 1.5,
+    pineapples: 1.5,
+}
+
+
 
 // pizza.veggies = {
 
@@ -46,48 +30,75 @@ menu.size = {
 let order = {};
 
 order = {
-    pizzaSize: "",
-    selectedCheese: [],
-    vegetableToppings: [],
-    meatTopping: [],
+    size: "",
+    cheese: [],
+    vegetables: [],
+    meat: [],
 }
 
 const pizza_cost = 0;
-
 
 $(document).ready(function () {
 
         $('.pizza-size-clickable').change(function(event) {
             event.preventDefault();
-
-            order.pizzaSize = $('input[name=pizza-size]:checked').val();
-            
+            order.size = $('input[name=pizza-size]:checked').val();
             // order.pizzaPrice = menu.size[pizzaSize];
             // order.
-
-        })
-
+        });
 
     // make a new array called selectedCheese. When a cheese is selected, push the value to selectedCheese array.
    //  loop through the selectedCheese array.
 
-        order.cheese = [];
-        
+        order.cheese = [];    
         $(".pizza-cheese input[type='checkbox']").click(function () {
-
             const cheeseValue = $(this).val();
-
             if (order.cheese.includes(cheeseValue)) {
-                order.cheese = order.cheese.filter(cheese => cheese != cheeseValue);      
-                
+                order.cheese = order.cheese.filter(cheese => cheese != cheeseValue);          
             } else {
                 order.cheese.push(cheeseValue);
             }
-
             console.log(order.cheese);
+        });
 
-        })
+        // order.vegetables = [];
+        // $(".pizza-vegetables input[type='checkbox']").click(function () {
+        //     const vegetablesValue = $(this).val();
+        //     if (order.vegetables.includes(vegetablesValue)) {
+        //         order.vegetables = order.vegetables.filter((vegetable) => {
+        //             return vegetable != vegetablesValue;
+        //         });
+        //     } else {
+        //         order.vegetables.push(vegetablesValue);
+        //     }
+        //     console.log(order.vegetables);
+        // });
 
+        order.vegetables = [];
+        $(".pizza-vegetables input[type='checkbox']").click(function(){
+            const vegetablesValue = $(this).val();
+            if (order.vegetables.includes(vegetablesValue)) {
+                order.vegetables = order.vegetables.filter((vegetable) => { 
+                    if (vegetable != vegetablesValue) {
+                        return;
+                    }     
+                });
+            } else {
+                order.vegetables.push(vegetablesValue);
+            }
+            console.log(order.vegetables);
+        });
+
+        order.meat = [];
+        $(".pizza-meat input[type='checkbox']").click(function(){
+            const meatValue = $(this).val();
+            if(order.meat.includes(meatValue)) {
+                order.meat = order.meat.filter(meat => meat != meatValue);
+            } else {
+                order.meat.push(meatValue);
+            }
+            console.log(order.meat);
+        });
 
         // $('.pizza-topping-cheese-inner').on('click', function (event){
     
