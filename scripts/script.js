@@ -7,24 +7,24 @@ menu.size = {
 }
 
 menu.cheese = {
-    feta: 1.5,
-    goat: 1.5,
-    mozzarella: 1.5,
+    feta: 1,
+    parmesan: 1.5,
+    mozzarella: 1,
 }
 
 menu.vegetables = {
     artichokes: 2.50,
-    blackOlives: 2.50,
+    olives: 2,
     broccolli: 2.50,
-    mushrooms: 2.50,
-    romatomatoes: 2.50,
+    mushrooms: 1.50,
+    tomatoes: 2,
     pineapples: 2.50,
 }
 
 menu.meat = {
     bacon: 4,
     pepperoni: 4,
-    buffaloChicken: 4,
+    chicken: 4,
 }
 
 let order = {};
@@ -39,12 +39,10 @@ order = {
 let pizzaCost = 0;
 
 $(document).ready(function () {
-/*
-    1. purpose of the function is to get the total price
-    2. see which items have been selected.
-    3. add the total price of the selected items together.
-    4. print it out.
-*/
+
+    $('.toppings').hide();
+    $('.checkout').hide();
+
     function addPrice() {
         pizzaCost = 0;
         let sizePrice = 0;
@@ -52,52 +50,83 @@ $(document).ready(function () {
         let vegetablesPrice = 0;
         let meatPrice = 0;
 
-        // if pizza size is not selected, then the size price should be 0. if pizza size is selected, size price should be the selecetd pizza's size price.
-         
-        // if (typeof order.size === 'undefined' || order.size.length === 0) {
-        //     sizePrice = 0;
-        // } else {
-        //     sizePrice = menu.size[order.size];
-        // }
+       
+
+        // sets price of pizza
+        if (typeof order.size === 'undefined' || order.size.length === 0) {
+            sizePrice = 0;
+
+        } else {
+            sizePrice = menu.size[order.size];
+            $('.toppings').fadeIn();
+            $('.checkout').fadeIn();
+            
+        }
         
-        // if (order.cheese.length === 0) {
-        //     cheesePrice = 0;
-        // } else {
-        //     // sets price of cheese
-        //     for (let i = 0; i < order.cheese.length; i++) {
-        //         cheesePrice = cheesePrice + menu.cheese[order.cheese[i]];
-        //     }
-
-        // }
-
-
+        // sets price of cheese
+        if (order.cheese.length === 0) {
+            cheesePrice = 0;
+        } else {
+            for (let i = 0; i < order.cheese.length; i++) {
+                cheesePrice = cheesePrice + menu.cheese[order.cheese[i]];
+            }
+        }
 
         // sets price of vegetables
-        for (let i = 0; i < order.vegetables.length; i++) {
-            vegetablesPrice = vegetablesPrice + menu.vegetables[order.vegetables[i]]
+        if (order.vegetables.length === 0) {
+            vegetablesPrice = 0;
+        } else {
+            for (let i = 0; i < order.vegetables.length; i++) {
+                vegetablesPrice = vegetablesPrice + menu.vegetables[order.vegetables[i]];
+            }
         }
 
         //sets price of meat
-        for (let i = 0; i < order.meat.length; i++) {
-            meatPrice = meatPrice + menu.meat[order.meat[i]];
+        if (order.meat.length === 0) {
+            meatPrice = 0;
+        } else {
+            for (let i = 0; i < order.meat.length; i++) {
+                meatPrice = meatPrice + menu.meat[order.meat[i]];
+            }
         }
 
-        // console.log(`size price - ${sizePrice}. cheese price ${cheesePrice}. veggie price ${vegetablesPrice}`)
+        console.log(`size price - ${sizePrice}. cheese price ${cheesePrice}. veggie price ${vegetablesPrice}. meat price ${meatPrice}`)
 
         //adds total
-        pizzaCost = sizePrice + cheesePrice + vegetablesPrice
-        //  + meatPrice;
+        pizzaCost = sizePrice + cheesePrice + vegetablesPrice + meatPrice;
   
         console.log(`Total price is - $ ${pizzaCost}`);
     }
 
+    function addItems() {
+        let priceList = "";
 
+        priceList = `<li>${order.size}</li>`;        
+        
+        // prints selected cheese
+        for (i = 0; i < order.cheese.length; i++) {
+            priceList = priceList + `<li>${order.cheese[i]}</li>`;
+        }
+
+        // prints selected vegetables
+        for (i = 0; i < order.vegetables.length; i++) {
+            priceList = priceList + `<li>${order.vegetables[i]}</li>`;
+        }
+
+        // prints selected meat
+        for (i = 0; i < order.meat.length; i++) {
+            priceList = priceList + `<li>${order.meat[i]}</li>`;
+        }
+
+        $(`ul`).empty().append(priceList);
+    }
 
 
     $('.pizza-size-clickable').change(function(event) {
         event.preventDefault();
         order.size = $('input[name=pizza-size]:checked').val();
         addPrice();
+        addItems();
     });
 
     order.cheese = []; 
@@ -109,7 +138,7 @@ $(document).ready(function () {
             order.cheese.push(cheeseValue);
         }
         addPrice();
-        // console.log(order.cheese);
+        addItems();
     });
 
     
@@ -122,7 +151,7 @@ $(document).ready(function () {
             order.vegetables.push(vegetablesValue);
         }
         addPrice();
-        // console.log(order.vegetables);
+        addItems();
     });
 
     order.meat = [];
@@ -134,10 +163,7 @@ $(document).ready(function () {
             order.meat.push(meatValue);
         }
         addPrice();
-        // console.log(order.meat);
+        addItems();
     });
 
-
 });
-
-
