@@ -131,3 +131,34 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background: lightgrey; }
+
+.wrapper {
+  max-width: 1141px;
+  margin: 0 auto;
+  position: relative; }
+
+section {
+  height: 100vh; }
+
+fieldset {
+  border: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.pizza-size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.pizza-size-contents {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 30%;
+  flex: 1 0 30%; }

@@ -4,11 +4,33 @@
 @import "partials/_header.scss";
 @import "partials/_footer.scss";
 
+* {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background: lightgrey;
+}
+
+.wrapper {
+    max-width: 1141px;
+    margin: 0 auto;
+    position: relative;
+}
+
+section {
+    height: 100vh;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    display: flex;
+}
 
 .pizza-size {
     display: flex;
 }
 
 .pizza-size-contents {
-    flex: 1 0 30%;
-}
+    flex: 1 0 30%
+} 

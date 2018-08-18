@@ -15,7 +15,7 @@ menu.cheese = {
 menu.vegetables = {
     artichokes: 2.50,
     olives: 2,
-    broccolli: 2.50,
+    broccoli: 2.50,
     mushrooms: 1.50,
     tomatoes: 2,
     pineapples: 2.50,
@@ -118,7 +118,8 @@ $(document).ready(function () {
             priceList = priceList + `<li>${order.meat[i]}</li>`;
         }
 
-        $(`ul`).empty().append(priceList);
+        $(`ul.chosen-items`).empty().append(priceList);
+        $(`.final-price`).empty().append(`Total price is - $ ${pizzaCost}`)
     }
 
 
