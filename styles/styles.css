@@ -135,8 +135,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 * {
   margin: 0;
   padding: 0;
-  overflow: auto;
-  background: lightgrey; }
+  overflow: auto; }
 
 .wrapper {
   max-width: 1141px;
@@ -146,19 +145,33 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 section {
   height: 100vh; }
 
-fieldset {
-  border: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
 .pizza-size {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
 
 .pizza-size-contents {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 30%;
-  flex: 1 0 30%; }
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  background: lightgrey; }
+
+.pizza-size label {
+  background: blue;
+  display: block;
+  width: 100px;
+  height: 100px; }
+
+.pizza-size-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center; }
+
+.pizza-size-contents input[type=radio] {
+  display: none; }

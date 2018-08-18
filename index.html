@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Build your Pizza</title>
+    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
 </head>
 <body>
   
@@ -16,30 +17,29 @@
     <section class="wrapper">
         <h2 class="section-header">pizza size</h2>
         <form action="">
-            <fieldset class="pizza-size">
-                <div class="pizza-size-contents">
-                    <label for="small">small</label>
-                    <input type="radio" name="pizza-size" value="small" class="pizza-size-clickable">
+            <article class="pizza-size">
+                <label class="pizza-size-contents" for="pizza-small">small
+                    <input type="radio" name="pizza-size" value="small" class="pizza-size-clickable" id="pizza-small">
                     <p>$8.50</p>
-                </div>
-                <div class="pizza-size-contents">
-                    <label for="medium">medium</label>
-                    <input type="radio" name="pizza-size" value="medium" class="pizza-size-clickable">
+                </label>
+                    
+                <label class="pizza-size-contents" for="pizza-medium">medium
+                    <input type="radio" name="pizza-size" value="medium" class="pizza-size-clickable" id="pizza-medium">
                     <p>$10.00</p>
-                </div>
-                <div class="pizza-size-contents">
-                    <label for="large">large</label>
-                    <input type="radio" name="pizza-size"  value="large" class="pizza-size-clickable">
+                </label>
+        
+                <label class="pizza-size-contents"for="pizza-large">large
+                    <input type="radio" name="pizza-size"  value="large" class="pizza-size-clickable" id="pizza-large">
                     <p>$11.50</p>
-                </div>
-            </fieldset>
+                </label>
+            </article>
         </form>
     </section>
 
     <section class="wrapper toppings">
         <h2 class="section-header">cheese toppings</h2>
         <form action="" class="pizza-cheese">
-            <fieldset>
+            <article>
                 <div>
                     <label for="feta">feta</label>
                     <input type="checkbox" name="cheese" value="feta" class="pizza-topping-cheese-inner">
@@ -52,7 +52,7 @@
                     <label for="mozzarella">mozzarella</label>
                     <input type="checkbox" name="cheese" value="mozzarella" class="pizza-topping-cheese-inner">
                 </div>
-            </fieldset>
+            </article>
         </form>
         <div>scroll down to select vegetable toppings</div>
     </section>
@@ -60,7 +60,7 @@
     <section class="wrapper toppings">
         <h2 class="section-header">vegetable toppings</h2>
         <form action="" class="pizza-vegetables">
-            <fieldset>
+            <article>
                 <div>
                     <label for="artichokes">artichokes</label>
                     <input type="checkbox" name="veggies" value="artichokes" class="pizza-topping-vegetables">
@@ -85,7 +85,7 @@
                     <label for="pineapples">pineapples</label>
                     <input type="checkbox" name="veggies" value="pineapples" class="pizza-topping-vegetables">
                 </div>
-            </fieldset>
+            </article>
         </form>
         <div>scroll down to select meat toppings </div>
     </section>
@@ -93,7 +93,7 @@
     <section class="wrapper toppings">
         <h2 class="section-header">meat toppings</h2>
         <form action="" class="pizza-meat">
-            <fieldset>
+            <article>
                 <div>
                     <label for="bacon">bacon</label>
                     <input type="checkbox" name="meat" value="bacon" class="pizza-topping-meat">
@@ -106,7 +106,7 @@
                     <label for="chicken">chicken</label>
                     <input type="checkbox" name="meat" value="chicken" class="pizza-topping-meat">
                 </div>
-            </fieldset>
+            </article>
         </form>
     </section>
 
