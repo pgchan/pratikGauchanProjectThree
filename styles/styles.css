@@ -134,17 +134,33 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 * {
   margin: 0;
-  padding: 0;
-  overflow: auto; }
+  padding: 0; }
 
 body {
   text-transform: uppercase;
   background: grey; }
 
+main {
+  max-width: 1140px; }
+
 .wrapper {
-  max-width: 1140px;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.main-contents {
+  -ms-flex-preferred-size: 70%;
+  flex-basis: 70%; }
+
+.checkout {
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 23px;
+  height: 600px; }
 
 h2, h3 {
   text-align: center; }
@@ -294,3 +310,10 @@ h2, h3 {
 
 .contents:hover .meat-pepperoni {
   background: url("assets/pepperoni-color.svg"); }
+
+.chosen-items {
+  list-style: none; }
+
+.chosen-items,
+.final-price {
+  padding-left: 30px; }

@@ -7,7 +7,7 @@
 * {
     margin: 0;
     padding: 0;
-    overflow: auto;
+    // overflow: auto;
 }
 
 body {
@@ -15,11 +15,25 @@ body {
     background: grey;
 }
 
-.wrapper {
+main {
     max-width: 1140px;
+    
+}
+.wrapper {
     margin: 0 auto;
     position: relative;
-    // display: flex;
+    display: flex;
+    // flex-direction: column;
+}
+
+.main-contents {flex-basis: 70%}
+
+.checkout {
+    flex-basis: 30%;
+    position: sticky;
+    top: 23px;
+    height: 600px;
+    // align-self: flex-start;
 }
 
 section {
@@ -153,3 +167,13 @@ h2, h3 {
 .contents:hover .meat-pepperoni {background: url("assets/pepperoni-color.svg")}
 
 
+// ASIDE //
+
+.chosen-items {
+    list-style: none;
+}
+
+.chosen-items,
+.final-price {
+    padding-left: 30px;
+}
