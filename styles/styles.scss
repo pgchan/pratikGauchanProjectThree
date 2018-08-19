@@ -10,6 +10,11 @@
     overflow: auto;
 }
 
+body {
+    text-transform: uppercase;
+    background: grey;
+}
+
 .wrapper {
     max-width: 1141px;
     margin: 0 auto;
@@ -17,34 +22,74 @@
 }
 
 section {
-    height: 100vh;
+    // height: 40vh;
+    // background: white;
 }
 
-.pizza-size {
-    display: flex;
-    justify-content: space-around;
-}
-
-.pizza-size-contents {
-    flex-basis: 30%;
-    background: lightgrey;
-} 
-
-.pizza-size label {
-    background: blue;
-    display: block;
-    width: 100px;
-    height: 100px;
-}
-
-
-.pizza-size-contents {
-    display: flex;
-    flex-direction: column;
+h2, h3 {
     text-align: center;
 }
+
+.section-header {
+    padding: 10%;
+}
+
+.section-body {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+// REPEATED PROPERTIES //
+
+.contents {
+    flex-basis: 30%;
+    background: lightgrey;
+    height: 300px;
+}
+
+.contents input[type=checkbox] {
+    display: none;
+}
+
+.contents:hover {
+    cursor: pointer;
+}
+
+// SECTION - pizza size //
+
+
+.pizza-size label {
+    background: lightgrey;
+    display: block;
+    height: 300px;
+}
+
 .pizza-size-contents input[type=radio] {
     display: none;
 }
 
-// input[type=radio] { display: none }
+.small-pizza-background {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url("assets/small-pizza-color.svg");
+}
+
+.small-pizza-background:hover {
+    background: ("assets/small-pizza-monotone.svg")
+}
+
+// SECTION - cheese toppings// 
+
+
+
+// SECTION - cheese vegetables // 
+
+.pizza-vegetables {
+    flex-wrap: wrap;
+}
+
+.vegetables-contents {
+    margin-bottom: 3%
+}

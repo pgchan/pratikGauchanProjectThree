@@ -40,8 +40,8 @@ let pizzaCost = 0;
 
 $(document).ready(function () {
 
-    $('.toppings').hide();
-    $('.checkout').hide();
+    // $('.toppings').hide();
+    // $('.checkout').hide();
 
     function addPrice() {
         pizzaCost = 0;
