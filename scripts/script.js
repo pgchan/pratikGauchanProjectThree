@@ -40,9 +40,9 @@ let pizzaCost = 0;
 
 $(document).ready(function () {
 
-    // $('.toppings').hide();
-    // $('.checkout').hide();
-
+    $('.toppings').hide();
+    $('.checkout').hide();
+    
     function addPrice() {
         pizzaCost = 0;
         let sizePrice = 0;
@@ -58,7 +58,7 @@ $(document).ready(function () {
         } else {
             sizePrice = menu.size[order.size];
             $('.toppings').fadeIn();
-            $('.checkout').fadeIn();    
+            $('.checkout').fadeIn();  
         }
         
         // sets price of cheese
@@ -93,13 +93,13 @@ $(document).ready(function () {
         //adds total
         pizzaCost = sizePrice + cheesePrice + vegetablesPrice + meatPrice;
   
-        console.log(`Total price is - $ ${pizzaCost}`);
+        console.log(`Total price - $ ${pizzaCost}`);
     }
 
     function addItems() {
         let priceList = "";
 
-        priceList = `<li>${order.size}</li>`;        
+        priceList = `<li>pizza size: ${order.size}</li>`;        
         
         // prints selected cheese
         for (i = 0; i < order.cheese.length; i++) {
@@ -117,7 +117,7 @@ $(document).ready(function () {
         }
 
         $(`ul.chosen-items`).empty().append(priceList);
-        $(`.final-price`).empty().append(`Total price is - $ ${pizzaCost}`)
+        $(`.final-price`).empty().append(`Total price - $ ${pizzaCost.toFixed(2)}`)
     }
 
 

@@ -12,13 +12,19 @@
 
 body {
     text-transform: uppercase;
-    background: grey;
+    background: lightyellow;
 }
 
 main {
     max-width: 1140px;
     
 }
+
+header {
+    height: 30vh;
+    background-color: white;
+}
+
 .wrapper {
     margin: 0 auto;
     position: relative;
@@ -26,20 +32,22 @@ main {
     // flex-direction: column;
 }
 
-.main-contents {flex-basis: 70%}
+.main-contents {flex-basis: 80%}
 
 .checkout {
-    flex-basis: 30%;
+    flex-basis: 20%;
     position: sticky;
     top: 23px;
     height: 600px;
-    // align-self: flex-start;
 }
 
-section {
-    // height: 100vh;
-    // background: white;
-}
+// .checkout .sectionHeader {
+//     margin-top: 7%;
+// }
+// section {
+//     // height: 100vh;
+//     // background: white;
+// }
 
 h2, h3 {
     text-align: center;
@@ -47,6 +55,13 @@ h2, h3 {
 
 .section-header {
     padding: 5%;
+    font-size: 2.5rem;
+}
+
+.section-header-price {
+    text-transform: lowercase;
+    font-size: 1rem;
+    font-style: italic;
 }
 
 .section-body {
@@ -55,16 +70,24 @@ h2, h3 {
     text-align: center;
 }
 
+.main-contents section {
+    margin-bottom: 10%;
+}
+
 // REPEATED PROPERTIES //
 
 .contents {
     flex-basis: 30%;
-    background: lightgrey;
+    // background: lightgrey;
     height: 300px;
+    border: 1px solid black;
 }
 
 .inner-header {
-    margin: 25px 0;
+    margin: 40px 0;
+    display: inline-block;
+    border-bottom: 3px solid black;
+    font-size: 1.5rem;
 }
 
 .contents input[type=checkbox] {
@@ -76,16 +99,17 @@ h2, h3 {
 }
 
 .icon {
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
     margin: 0 auto;
     background-repeat: no-repeat;
-    background-size: cover;   
+    background-size: contain;  
+    // margin: 50px auto; 
 }
 
 .icon:hover {
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
     margin: 0 auto;
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,28 +125,38 @@ h2, h3 {
 
 .pizza-size-price {margin: 10px 0;}
 
-.small-pizza {background: url("assets/small-pizza-grayscale.svg");}
-.contents:hover .small-pizza {background: url("assets/small-pizza-color.svg");}
+.small-pizza {background-image: url("assets/small-pizza-grayscale.svg");}
+.contents:hover .small-pizza {background-image: url("assets/small-pizza-color.svg");}
+#pizza-small:checked + .small-pizza {
+    background-image: url("assets/small-pizza-color.svg");
+}
 
-.medium-pizza {background: url("assets/medium-pizza-grayscale.svg");}
-.contents:hover .medium-pizza {background: url("assets/medium-pizza-color.svg");}
+.medium-pizza {background-image: url("assets/medium-pizza-grayscale.svg");}
+.contents:hover .medium-pizza {background-image: url("assets/medium-pizza-color.svg");}
+#pizza-medium:checked + .medium-pizza {
+    background-image: url("assets/medium-pizza-color.svg");
+}
 
-.large-pizza {background: url("assets/large-pizza-grayscale.svg");}
-.contents:hover .large-pizza {background: url("assets/large-pizza-color.svg");}
 
+.large-pizza {background-image: url("assets/large-pizza-grayscale.svg");}
+.contents:hover .large-pizza {background-image: url("assets/large-pizza-color.svg");}
+#pizza-large:checked + .large-pizza {background-image: url("assets/large-pizza-color.svg");}
 
 
 // SECTION - cheese toppings// 
 
-.feta-cheese {background: url("assets/feta-grayscale.svg");}
-.contents:hover .feta-cheese {background: url("assets/feta-color.svg");}
+.feta-cheese {background-image: url("assets/feta-grayscale.svg");}
+.contents:hover .feta-cheese {background-image: url("assets/feta-color.svg");}
+#feta:checked + .feta-cheese{background-image: url("assets/feta-color.svg");}
 
-.mozzarella-cheese {background: url("assets/mozzarella-grayscale.svg");}
-.contents:hover .mozzarella-cheese {background: url("assets/mozzarella-color.svg");}
 
-.parmesan-cheese {background: url("assets/parmesan-grayscale.svg");}
-.contents:hover .parmesan-cheese {background: url("assets/parmesan-color.svg");}
+.mozzarella-cheese {background-image: url("assets/mozzarella-grayscale.svg");}
+.contents:hover .mozzarella-cheese {background-image: url("assets/mozzarella-color.svg");}
+#mozzarella:checked + .mozzarella-cheese{background-image: url("assets/mozzarella-color.svg");}
 
+.parmesan-cheese {background-image: url("assets/parmesan-grayscale.svg");}
+.contents:hover .parmesan-cheese {background-image: url("assets/parmesan-color.svg");}
+#parmesan:checked + .parmesan-cheese{background-image: url("assets/parmesan-color.svg");}
 
 
 // SECTION -  vegetables // 
@@ -135,39 +169,52 @@ h2, h3 {
     margin-bottom: 3%;
 }
 
-.vegetables-artichokes {background: url("assets/artichokes-grayscale.svg");}
-.contents:hover .vegetables-artichokes {background: url("assets/artichokes-color.svg");}
+.vegetables-artichokes {background-image: url("assets/artichokes-grayscale.svg");}
+.contents:hover .vegetables-artichokes {background-image: url("assets/artichokes-color.svg");}
+#artichokes:checked + .vegetables-artichokes {background-image: url("assets/artichokes-color.svg");}
 
-.vegetables-broccoli {background: url("assets/broccoli-grayscale.svg");}
-.contents:hover .vegetables-broccoli {background: url("assets/broccoli-color.svg");}
+.vegetables-broccoli {background-image: url("assets/broccoli-grayscale.svg");}
+.contents:hover .vegetables-broccoli {background-image: url("assets/broccoli-color.svg");}
+#broccoli:checked + .vegetables-broccoli {background-image: url("assets/broccoli-color.svg");}
 
-.vegetables-mushrooms {background: url("assets/mushrooms-grayscale.svg");}
-.contents:hover .vegetables-mushrooms {background: url("assets/mushrooms-color.svg");}
+.vegetables-mushrooms {background-image: url("assets/mushrooms-grayscale.svg");}
+.contents:hover .vegetables-mushrooms {background-image: url("assets/mushrooms-color.svg");}
+#mushrooms:checked + .vegetables-mushrooms {background-image: url("assets/mushrooms-color.svg");}
 
-.vegetables-olives {background: url("assets/olives-grayscale.svg");}
-.contents:hover .vegetables-olives {background: url("assets/olives-color.svg");}
+.vegetables-olives {background-image: url("assets/olives-grayscale.svg");}
+.contents:hover .vegetables-olives {background-image: url("assets/olives-color.svg");}
+#olives:checked + .vegetables-olives {background-image: url("assets/olives-color.svg");}
 
-.vegetables-pineapple {background: url("assets/pineapple-grayscale.svg")}
-.contents:hover .vegetables-pineapple {background: url("assets/pineapple-color.svg")}
+.vegetables-pineapple {background-image: url("assets/pineapple-grayscale.svg")}
+.contents:hover .vegetables-pineapple {background-image: url("assets/pineapple-color.svg")}
+#pineapple:checked + .vegetables-pineapple {background-image: url("assets/pineapple-color.svg");}
 
-.vegetables-tomatoes {background: url("assets/tomatoes-grayscale.svg");}
-.contents:hover .vegetables-tomatoes {background: url("assets/tomatoes-color.svg");}
+.vegetables-tomatoes {background-image: url("assets/tomatoes-grayscale.svg");}
+.contents:hover .vegetables-tomatoes {background-image: url("assets/tomatoes-color.svg");}
+#tomatoes:checked + .vegetables-tomatoes {background-image: url("assets/tomatoes-color.svg");}
 
 
 // SECTION - MEAT //
 
+.meat-bacon {background-image: url("assets/bacon-grayscale.svg")}
+.contents:hover .meat-bacon {background-image: url("assets/bacon-color.svg")}
+#bacon:checked + .meat-bacon {background-image: url("assets/bacon-color.svg")}
 
-.meat-bacon {background: url("assets/bacon-grayscale.svg")}
-.contents:hover .meat-bacon {background: url("assets/bacon-color.svg")}
+.meat-chicken {background-image: url("assets/chicken-grayscale.svg")}
+.contents:hover .meat-chicken {background-image: url("assets/chicken-color.svg")}
+#chicken:checked + .meat-chicken {background-image: url("assets/chicken-color.svg")}
 
-.meat-chicken {background: url("assets/chicken-grayscale.svg")}
-.contents:hover .meat-chicken {background: url("assets/chicken-color.svg")}
-
-.meat-pepperoni {background: url("assets/pepperoni-grayscale.svg")}
-.contents:hover .meat-pepperoni {background: url("assets/pepperoni-color.svg")}
+.meat-pepperoni {background-image: url("assets/pepperoni-grayscale.svg")}
+.contents:hover .meat-pepperoni {background-image: url("assets/pepperoni-color.svg")}
+#pepperoni:checked + .meat-pepperoni {background-image: url("assets/pepperoni-color.svg")}
 
 
 // ASIDE //
+
+.checkout .section-header {
+    margin-top: 18%;
+    font-size: 1.5rem;
+}
 
 .chosen-items {
     list-style: none;
@@ -176,4 +223,8 @@ h2, h3 {
 .chosen-items,
 .final-price {
     padding-left: 30px;
+}
+
+.chosen-items li {
+    margin: 10px 0;
 }
