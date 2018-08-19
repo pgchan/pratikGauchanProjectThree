@@ -7,18 +7,18 @@ menu.size = {
 }
 
 menu.cheese = {
-    feta: 1,
-    parmesan: 1.5,
-    mozzarella: 1,
+    feta: 2,
+    parmesan: 2,
+    mozzarella: 2,
 }
 
 menu.vegetables = {
-    artichokes: 2.50,
-    olives: 2,
-    broccoli: 2.50,
-    mushrooms: 1.50,
-    tomatoes: 2,
-    pineapple: 2.50,
+    artichokes: 3,
+    olives: 3,
+    broccoli: 3,
+    mushrooms: 3,
+    tomatoes: 3,
+    pineapple: 3,
 }
 
 menu.meat = {
@@ -50,7 +50,6 @@ $(document).ready(function () {
         let vegetablesPrice = 0;
         let meatPrice = 0;
 
-       
 
         // sets price of pizza
         if (typeof order.size === 'undefined' || order.size.length === 0) {
@@ -59,8 +58,7 @@ $(document).ready(function () {
         } else {
             sizePrice = menu.size[order.size];
             $('.toppings').fadeIn();
-            $('.checkout').fadeIn();
-            
+            $('.checkout').fadeIn();    
         }
         
         // sets price of cheese

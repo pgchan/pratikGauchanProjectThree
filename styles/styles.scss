@@ -19,6 +19,7 @@ body {
     max-width: 1140px;
     margin: 0 auto;
     position: relative;
+    // display: flex;
 }
 
 section {
@@ -31,7 +32,7 @@ h2, h3 {
 }
 
 .section-header {
-    padding: 10%;
+    padding: 5%;
 }
 
 .section-body {
@@ -46,6 +47,10 @@ h2, h3 {
     flex-basis: 30%;
     background: lightgrey;
     height: 300px;
+}
+
+.inner-header {
+    margin: 25px 0;
 }
 
 .contents input[type=checkbox] {
@@ -80,29 +85,29 @@ h2, h3 {
     display: none;
 }
 
-
+.pizza-size-price {margin: 10px 0;}
 
 .small-pizza {background: url("assets/small-pizza-grayscale.svg");}
-.small-pizza:hover {background: url("assets/small-pizza-color.svg");}
+.contents:hover .small-pizza {background: url("assets/small-pizza-color.svg");}
 
 .medium-pizza {background: url("assets/medium-pizza-grayscale.svg");}
-.medium-pizza:hover {background: url("assets/medium-pizza-color.svg");}
+.contents:hover .medium-pizza {background: url("assets/medium-pizza-color.svg");}
 
 .large-pizza {background: url("assets/large-pizza-grayscale.svg");}
-.large-pizza:hover {background: url("assets/large-pizza-color.svg");}
+.contents:hover .large-pizza {background: url("assets/large-pizza-color.svg");}
 
 
 
 // SECTION - cheese toppings// 
 
 .feta-cheese {background: url("assets/feta-grayscale.svg");}
-.feta-cheese:hover {background: url("assets/feta-color.svg");}
+.contents:hover .feta-cheese {background: url("assets/feta-color.svg");}
 
 .mozzarella-cheese {background: url("assets/mozzarella-grayscale.svg");}
-.mozzarella-cheese:hover {background: url("assets/mozzarella-color.svg");}
+.contents:hover .mozzarella-cheese {background: url("assets/mozzarella-color.svg");}
 
 .parmesan-cheese {background: url("assets/parmesan-grayscale.svg");}
-.parmesan-cheese:hover {background: url("assets/parmesan-color.svg");}
+.contents:hover .parmesan-cheese {background: url("assets/parmesan-color.svg");}
 
 
 
@@ -113,38 +118,38 @@ h2, h3 {
 }
 
 .vegetables-contents {
-    margin-bottom: 3%
+    margin-bottom: 3%;
 }
 
 .vegetables-artichokes {background: url("assets/artichokes-grayscale.svg");}
-.vegetables-artichokes:hover {background: url("assets/artichokes-color.svg");}
+.contents:hover .vegetables-artichokes {background: url("assets/artichokes-color.svg");}
 
 .vegetables-broccoli {background: url("assets/broccoli-grayscale.svg");}
-.vegetables-broccoli:hover {background: url("assets/broccoli-color.svg");}
+.contents:hover .vegetables-broccoli {background: url("assets/broccoli-color.svg");}
 
 .vegetables-mushrooms {background: url("assets/mushrooms-grayscale.svg");}
-.vegetables-mushrooms:hover {background: url("assets/mushrooms-color.svg");}
+.contents:hover .vegetables-mushrooms {background: url("assets/mushrooms-color.svg");}
 
 .vegetables-olives {background: url("assets/olives-grayscale.svg");}
-.vegetables-olives:hover {background: url("assets/olives-color.svg");}
+.contents:hover .vegetables-olives {background: url("assets/olives-color.svg");}
 
 .vegetables-pineapple {background: url("assets/pineapple-grayscale.svg")}
-.vegetables-pineapple:hover {background: url("assets/pineapple-color.svg")}
+.contents:hover .vegetables-pineapple {background: url("assets/pineapple-color.svg")}
 
 .vegetables-tomatoes {background: url("assets/tomatoes-grayscale.svg");}
-.vegetables-tomatoes:hover {background: url("assets/tomatoes-color.svg");}
+.contents:hover .vegetables-tomatoes {background: url("assets/tomatoes-color.svg");}
 
 
 // SECTION - MEAT //
 
 
 .meat-bacon {background: url("assets/bacon-grayscale.svg")}
-.meat-bacon:hover {background: url("assets/bacon-color.svg")}
+.contents:hover .meat-bacon {background: url("assets/bacon-color.svg")}
 
 .meat-chicken {background: url("assets/chicken-grayscale.svg")}
-.meat-chicken:hover {background: url("assets/chicken-color.svg")}
+.contents:hover .meat-chicken {background: url("assets/chicken-color.svg")}
 
 .meat-pepperoni {background: url("assets/pepperoni-grayscale.svg")}
-.meat-pepperoni:hover {background: url("assets/pepperoni-color.svg")}
+.contents:hover .meat-pepperoni {background: url("assets/pepperoni-color.svg")}
 
 
