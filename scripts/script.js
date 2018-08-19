@@ -18,7 +18,7 @@ menu.vegetables = {
     broccoli: 2.50,
     mushrooms: 1.50,
     tomatoes: 2,
-    pineapples: 2.50,
+    pineapple: 2.50,
 }
 
 menu.meat = {

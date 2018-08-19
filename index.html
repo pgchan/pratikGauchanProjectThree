@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Build your Pizza</title>
-    <!-- <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css"> -->
+
 </head>
 <body>
   
@@ -19,19 +19,22 @@
         <form action="">
             <article class="pizza-size section-body">
                 <label class="pizza-size-contents contents" for="pizza-small">
-                    <div class="small-pizza-background"></div>
-                    <p>small</p>
+                    <h3>small</h3>
+                    <div class="small-pizza icon"></div>
                     <input type="radio" name="pizza-size" value="small" class="pizza-size-clickable" id="pizza-small">
                     <p>$8.50</p>
                 </label>
                     
-                <label class="pizza-size-contents contents" for="pizza-medium">medium
-                    <img src="assets/small-pizza-monotone.svg" alt="">
+                <label class="pizza-size-contents contents" for="pizza-medium">
+                    <h3>medium</h3>
+                    <div class="medium-pizza icon"></div>
                     <input type="radio" name="pizza-size" value="medium" class="pizza-size-clickable" id="pizza-medium">
                     <p>$10.00</p>
                 </label>
         
-                <label class="pizza-size-contents contents"for="pizza-large">large
+                <label class="pizza-size-contents contents"for="pizza-large">
+                    <h3>large</h3>
+                    <div class="large-pizza icon"></div>
                     <input type="radio" name="pizza-size"  value="large" class="pizza-size-clickable" id="pizza-large">
                     <p>$11.50</p>
                 </label>
@@ -44,14 +47,20 @@
         <h3>$2.00 each</h3>
         <form action="" >
             <article class="pizza-cheese section-body">
-                <label class="cheese-contents contents" for="feta">feta
+                <label class="cheese-contents contents" for="feta">
+                    <h3>feta</h3>
+                    <div class="feta-cheese icon"></div>
                     <input type="checkbox" name="cheese" value="feta" class="pizza-topping-cheese-inner" id="feta">
                 </label>
-                <label class="cheese-contents contents" for="parmesan">parmesan
-                    <input type="checkbox" name="cheese" value="parmesan" class="pizza-topping-cheese-inner" id="parmesan">
-                </label>
-                <label class="cheese-contents contents" for="mozzarella">mozzarella
+                <label class="cheese-contents contents" for="mozzarella">
+                    <h3>mozzarella</h3>
+                    <div class="mozzarella-cheese icon"></div>
                     <input type="checkbox" name="cheese" value="mozzarella" class="pizza-topping-cheese-inner" id="mozzarella">
+                </label>
+                <label class="cheese-contents contents" for="parmesan">
+                    <h3>parmesan</h3>
+                    <div class="parmesan-cheese icon"></div>
+                    <input type="checkbox" name="cheese" value="parmesan" class="pizza-topping-cheese-inner" id="parmesan">
                 </label>
             </article>
         </form>
@@ -62,23 +71,36 @@
         <h2 class="section-header">vegetable toppings</h2>
         <form action="">
             <article class="pizza-vegetables section-body">
-                <label class="vegetables-contents contents"for="artichokes">artichokes
+                <label class="vegetables-contents contents" for="artichokes">
+                    <h3>artichokes</h3>
+                    <div class="vegetables-artichokes icon"></div>
                     <input type="checkbox" name="veggies" value="artichokes" class="pizza-topping-vegetables" id="artichokes">
                 </label>
-                <label class="vegetables-contents contents"for="olives">olives
-                    <input type="checkbox" name="veggies" value="olives" class="pizza-topping-vegetables" id="olives">
-                </label>
-                <label class="vegetables-contents contents"for="broccoli">broccoli
+                <label class="vegetables-contents contents" for="broccoli">
+                    <h3>broccoli</h3>
+                    <div class="vegetables-broccoli icon"></div>
                     <input type="checkbox" name="veggies" value="broccoli" class="pizza-topping-vegetables" id="broccoli">
                 </label>
-                <label class="vegetables-contents contents"for="mushrooms">mushrooms
+                <label class="vegetables-contents contents" for="mushrooms">
+                    <h3>mushrooms</h3>
+                    <div class="vegetables-mushrooms icon"></div>
                     <input type="checkbox" name="veggies" value="mushrooms" class="pizza-topping-vegetables" id="mushrooms">
                 </label>
-                <label class="vegetables-contents contents"for="tomatoes">tomatoes
-                    <input type="checkbox" name="veggies" value="tomatoes" class="pizza-topping-vegetables" id="tomatoes">
+                <label class="vegetables-contents contents" for="olives">
+                    <h3>olives</h3>
+                    <div class="vegetables-olives icon"></div>
+                    <input type="checkbox" name="veggies" value="olives" class="pizza-topping-vegetables" id="olives">
                 </label>
-                <label class="vegetables-contents contents"for="pineapples">pineapples
-                    <input type="checkbox" name="veggies" value="pineapples" class="pizza-topping-vegetables" id="pineapples">
+
+                <label class="vegetables-contents contents" for="pineapple">
+                    <h3>pineapple</h3>
+                    <div class="vegetables-pineapple icon"></div>
+                    <input type="checkbox" name="veggies" value="pineapple" class="pizza-topping-vegetables" id="pineapple">
+                </label>
+                <label class="vegetables-contents contents" for="tomatoes">
+                    <h3>tomatoes</h3>
+                    <div class="vegetables-tomatoes icon"></div>
+                    <input type="checkbox" name="veggies" value="tomatoes" class="pizza-topping-vegetables" id="tomatoes">
                 </label>
             </article>
         </form>
@@ -87,21 +109,26 @@
 
     <section class="wrapper toppings">
         <h2 class="section-header">meat toppings</h2>
-        <form action="" class="pizza-meat">
-            <article class="section-body">
-                <label class="contents" for="bacon">bacon
+        <form action="">
+            <article class="pizza-meat section-body">
+                <label class="meat-contents contents" for="bacon">
+                    <h3>bacon</h3>
+                    <div class="meat-bacon icon"></div>
                     <input type="checkbox" name="meat" value="bacon" class="pizza-topping-meat" id="bacon">
                 </label>
-
-                <label class="contents" for="pepperoni">pepperoni
-                    <input type="checkbox" name="meat" value="pepperoni" class="pizza-topping-meat" id="pepperoni">
-                </label>
-
-                <label class="contents" for="chicken">chicken
+                <label class="meat-contents contents" for="chicken">
+                    <h3>chicken</h3>
+                    <div class="meat-chicken icon"></div>
                     <input type="checkbox" name="meat" value="chicken" class="pizza-topping-meat" id="chicken">
+                </label>
+                <label class="meat-contents contents" for="pepperoni">
+                    <h3>pepperoni</h3>
+                    <div class="meat-pepperoni icon"></div>
+                    <input type="checkbox" name="meat" value="pepperoni" class="pizza-topping-meat" id="pepperoni">
                 </label>
             </article>
         </form>
+        <div>scroll down to select vegetable toppings</div>
     </section>
 
    <section class="wrapper checkout">
