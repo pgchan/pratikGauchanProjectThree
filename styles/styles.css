@@ -151,18 +151,6 @@ h3 {
 .total-price {
   font-weight: 700; }
 
-.total-price-header {
-  margin-top: 30px;
-  padding-left: 30px; }
-
-footer {
-  padding: 5px 0;
-  position: fixed;
-  margin-bottom: 0;
-  bottom: 0;
-  width: 100%;
-  background: #fabe58; }
-
 .header {
   padding: 8%;
   -webkit-box-orient: vertical;
@@ -191,6 +179,9 @@ footer {
   bottom: 0;
   width: 100%;
   background: #fabe58; }
+
+.total-price {
+  font-weight: 700; }
 
 * {
   margin: 0;
