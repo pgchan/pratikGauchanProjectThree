@@ -135,6 +135,35 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 body {
   font-family: 'Open Sans', sans-serif; }
 
+.section-header-price {
+  text-transform: lowercase;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+  font-weight: 600; }
+
+.order-header {
+  font-weight: 700; }
+
+.final-price {
+  font-weight: 700; }
+
+.final-price-header {
+  margin-top: 30px;
+  padding-left: 30px; }
+
+footer {
+  padding: 5px 0;
+  position: fixed;
+  height: 40px;
+  margin-bottom: 0;
+  bottom: 0;
+  width: 100%;
+  background: yellow; }
+
+footer {
+  display: none; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -158,28 +187,25 @@ header {
   display: flex; }
 
 .main-contents {
-  -ms-flex-preferred-size: 80%;
-  flex-basis: 80%; }
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
 
 .checkout {
-  -ms-flex-preferred-size: 20%;
-  flex-basis: 20%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 226px;
+  flex: 0 0 226px;
   position: -webkit-sticky;
   position: sticky;
   top: 23px;
-  height: 600px; }
+  height: 600px;
+  padding-right: 30px; }
 
 h2, h3 {
   text-align: center; }
 
 .section-header {
-  padding: 5%;
+  margin-top: 5%;
   font-size: 2.5rem; }
-
-.section-header-price {
-  text-transform: lowercase;
-  font-size: 1rem;
-  font-style: italic; }
 
 .section-body {
   display: -webkit-box;
@@ -187,7 +213,8 @@ h2, h3 {
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  text-align: center; }
+  text-align: center;
+  margin-top: 2%; }
 
 .main-contents section {
   margin-bottom: 10%; }
@@ -195,11 +222,12 @@ h2, h3 {
 .contents {
   -ms-flex-preferred-size: 30%;
   flex-basis: 30%;
-  height: 300px;
-  border: 1px solid black; }
+  padding: 5%;
+  border: 1px solid black;
+  position: relative; }
 
 .inner-header {
-  margin: 40px 0;
+  margin-bottom: 20%;
   display: inline-block;
   border-bottom: 3px solid black;
   font-size: 1.5rem; }
@@ -215,23 +243,11 @@ h2, h3 {
   width: 120px;
   margin: 0 auto;
   background-repeat: no-repeat;
-  background-size: contain; }
-
-.icon:hover {
-  height: 120px;
-  width: 120px;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s; }
+  background-size: contain;
+  margin-bottom: 15px; }
 
 .pizza-size-contents input[type=radio] {
   display: none; }
-
-.pizza-size-price {
-  margin: 10px 0; }
 
 .small-pizza {
   background-image: url("assets/small-pizza-grayscale.svg"); }
@@ -376,7 +392,7 @@ h2, h3 {
   background-image: url("assets/pepperoni-color.svg"); }
 
 .checkout .section-header {
-  margin-top: 18%;
+  margin-top: 60px;
   font-size: 1.5rem; }
 
 .chosen-items {
@@ -388,3 +404,24 @@ h2, h3 {
 
 .chosen-items li {
   margin: 10px 0; }
+
+.order-header {
+  border-bottom: 1px solid black; }
+
+@media only screen and (max-width: 1000px) {
+  .icon {
+    height: 90px;
+    width: 90px; }
+  .inner-header {
+    font-size: 1.25rem; }
+  .section-header {
+    font-size: 1.5rem; } }
+
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  aside .final-price {
+    display: none; } }

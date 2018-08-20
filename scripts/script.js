@@ -42,7 +42,8 @@ $(document).ready(function () {
 
     $('.toppings').hide();
     $('.checkout').hide();
-    
+    $('footer').hide();
+
     function addPrice() {
         pizzaCost = 0;
         let sizePrice = 0;
@@ -50,15 +51,15 @@ $(document).ready(function () {
         let vegetablesPrice = 0;
         let meatPrice = 0;
 
-
         // sets price of pizza
         if (typeof order.size === 'undefined' || order.size.length === 0) {
             sizePrice = 0;
 
         } else {
             sizePrice = menu.size[order.size];
-            $('.toppings').fadeIn();
-            $('.checkout').fadeIn();  
+            $('.toppings').fadeIn(700);
+            $('.checkout').fadeIn(700);
+            $('footer').fadeIn(700);
         }
         
         // sets price of cheese
@@ -88,36 +89,37 @@ $(document).ready(function () {
             }
         }
 
-        console.log(`size price - ${sizePrice}. cheese price ${cheesePrice}. veggie price ${vegetablesPrice}. meat price ${meatPrice}`)
-
         //adds total
         pizzaCost = sizePrice + cheesePrice + vegetablesPrice + meatPrice;
   
-        console.log(`Total price - $ ${pizzaCost}`);
     }
 
     function addItems() {
         let priceList = "";
 
-        priceList = `<li>pizza size: ${order.size}</li>`;        
+        priceList = `<li class="order-header">SIZE:</li>`
+        priceList = priceList + `<li>${order.size}</li>`;        
         
         // prints selected cheese
+        priceList = priceList + `<li class="order-header">CHEESE:</li>`
         for (i = 0; i < order.cheese.length; i++) {
             priceList = priceList + `<li>${order.cheese[i]}</li>`;
         }
 
         // prints selected vegetables
+        priceList = priceList + `<li class="order-header">VEGETABLES:</li>`
         for (i = 0; i < order.vegetables.length; i++) {
             priceList = priceList + `<li>${order.vegetables[i]}</li>`;
         }
 
         // prints selected meat
+        priceList = priceList + `<li class="order-header">MEAT:</li>`
         for (i = 0; i < order.meat.length; i++) {
             priceList = priceList + `<li>${order.meat[i]}</li>`;
         }
 
         $(`ul.chosen-items`).empty().append(priceList);
-        $(`.final-price`).empty().append(`Total price - $ ${pizzaCost.toFixed(2)}`)
+        $(`.final-price`).empty().append(`final price - $ ${pizzaCost.toFixed(2)}<em>`)
     }
 
 

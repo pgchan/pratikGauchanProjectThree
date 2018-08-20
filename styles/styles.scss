@@ -32,42 +32,30 @@ header {
     // flex-direction: column;
 }
 
-.main-contents {flex-basis: 80%}
+.main-contents {flex-basis: 100%}
 
 .checkout {
-    flex-basis: 20%;
+    flex: 0 0 226px;
     position: sticky;
     top: 23px;
     height: 600px;
+    padding-right: 30px;
 }
-
-// .checkout .sectionHeader {
-//     margin-top: 7%;
-// }
-// section {
-//     // height: 100vh;
-//     // background: white;
-// }
 
 h2, h3 {
     text-align: center;
 }
 
 .section-header {
-    padding: 5%;
+    margin-top: 5%;
     font-size: 2.5rem;
-}
-
-.section-header-price {
-    text-transform: lowercase;
-    font-size: 1rem;
-    font-style: italic;
 }
 
 .section-body {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    margin-top: 2%;
 }
 
 .main-contents section {
@@ -78,13 +66,13 @@ h2, h3 {
 
 .contents {
     flex-basis: 30%;
-    // background: lightgrey;
-    height: 300px;
+    padding: 5%;
     border: 1px solid black;
+    position: relative;
 }
 
 .inner-header {
-    margin: 40px 0;
+    margin-bottom: 20%;
     display: inline-block;
     border-bottom: 3px solid black;
     font-size: 1.5rem;
@@ -104,17 +92,17 @@ h2, h3 {
     margin: 0 auto;
     background-repeat: no-repeat;
     background-size: contain;  
-    // margin: 50px auto; 
+    margin-bottom: 15px;
 }
 
-.icon:hover {
-    height: 120px;
-    width: 120px;
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: 0.2s;
-}
+// .icon:hover {
+//     // height: 120px;
+//     // width: 120px;
+//     // margin: 0 auto;
+//     // background-repeat: no-repeat;
+//     // background-size: cover;
+//     // transition: 1s;
+// }
 
 
 // SECTION - pizza size //
@@ -123,7 +111,9 @@ h2, h3 {
     display: none;
 }
 
-.pizza-size-price {margin: 10px 0;}
+
+
+// .pizza-size-price {margin: 10px 0;}
 
 .small-pizza {background-image: url("assets/small-pizza-grayscale.svg");}
 .contents:hover .small-pizza {background-image: url("assets/small-pizza-color.svg");}
@@ -212,7 +202,7 @@ h2, h3 {
 // ASIDE //
 
 .checkout .section-header {
-    margin-top: 18%;
+    margin-top: 60px;
     font-size: 1.5rem;
 }
 
@@ -227,4 +217,42 @@ h2, h3 {
 
 .chosen-items li {
     margin: 10px 0;
+}
+
+.order-header {
+    border-bottom: 1px solid black;
+}
+
+
+
+
+// MEDIA QUERIES //
+
+
+
+@media only screen and (max-width: 1000px) {
+    .icon {
+        height: 90px;
+        width: 90px;
+    }
+    .inner-header {
+        font-size: 1.25rem;
+    }
+
+    .section-header {
+        font-size: 1.5rem;
+    }
+    
+}
+
+
+@media only screen and (max-width: 900px) {
+    .wrapper {flex-direction: column;}
+
+    footer {
+        // display: block;
+        
+    }
+
+    aside .final-price {display: none;}
 }
