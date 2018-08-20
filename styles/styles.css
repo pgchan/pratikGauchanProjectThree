@@ -163,6 +163,26 @@ footer {
   width: 100%;
   background: #fabe58; }
 
+.header {
+  padding: 8%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.header-image {
+  height: 300px; }
+
+.main-header {
+  margin-bottom: 10%;
+  font-size: 2.5rem; }
+
 footer {
   display: none; }
 
@@ -174,19 +194,13 @@ body {
   text-transform: uppercase;
   background: lightyellow; }
 
-main {
-  max-width: 1140px; }
-
-header {
-  height: 30vh;
-  background-color: white; }
-
 .wrapper {
   margin: 0 auto;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  max-width: 1140px; }
 
 .main-contents {
   -ms-flex-preferred-size: 100%;
@@ -243,6 +257,9 @@ h2, h3 {
 .contents:hover .inner-header {
   color: #000;
   border-bottom: 3px solid #000; }
+
+.contents input:checked {
+  background: #fde3a7; }
 
 .contents input:checked + .inner-header {
   color: #000;
@@ -403,6 +420,7 @@ h2, h3 {
 
 .checkout .section-header {
   margin-top: 60px;
+  margin-bottom: 20px;
   font-size: 1.5rem; }
 
 .chosen-items {
@@ -413,14 +431,15 @@ h2, h3 {
 .final-price {
   padding-left: 30px; }
 
-.chosen-items li {
-  margin: 10px 0; }
+.padding-left {
+  font-size: 1.5rem; }
 
 .order-header {
   border-bottom: 1px solid black; }
 
 .order-item {
-  margin-left: 2%; }
+  margin: 5px 0 5px 10px;
+  text-transform: initial; }
 
 @media only screen and (max-width: 1000px) {
   .icon {
@@ -440,7 +459,18 @@ h2, h3 {
   footer.sticky {
     display: block; }
   aside .final-price {
-    display: none; } }
+    display: none; }
+  .chosen-items {
+    padding-bottom: 100px; }
+  .final-price {
+    font-size: 1.5rem;
+    margin: 20px 0; } }
+
+@media only screen and (max-width: 750px) {
+  .main-header {
+    font-size: 2rem; }
+  .header-image {
+    height: 200px; } }
 
 @media only screen and (max-width: 680px) {
   .section-body {
@@ -469,7 +499,8 @@ h2, h3 {
   .pizza-size-price {
     position: absolute;
     left: 31%;
-    bottom: 5%; }
+    bottom: 5%;
+    font-style: italic; }
   .inner-header {
     margin-bottom: 0;
     border-bottom: none;
@@ -482,4 +513,16 @@ h2, h3 {
     height: 50px;
     width: 50px; }
   .vegetables-contents {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .chosen-items {
+    padding-bottom: 60px; } }
+
+@media only screen and (max-width: 465px) {
+  .main-header {
+    font-size: 1.3rem; }
+  .header-image {
+    height: 150px; } }
+
+@media only screen and (max-width: 370px) {
+  .header-image {
+    height: 120px; } }
