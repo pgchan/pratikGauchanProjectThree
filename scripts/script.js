@@ -118,7 +118,7 @@ $(document).ready(function () {
         }
 
         $(`ul.chosen-items`).empty().append(priceList);
-        $(`.final-price`).empty().append(`final price - $${pizzaCost.toFixed(2)}<em>`)
+        $(`.total-price`).empty().append(`total price - $${pizzaCost.toFixed(2)}<em>`)
     }
 
 

@@ -81,7 +81,6 @@ h2, h3 {text-align: center;}
     border-bottom: 3px solid #000;
 }
 
-
 .icon {
     height: 120px;
     width: 120px;
@@ -187,7 +186,7 @@ h2, h3 {text-align: center;}
 }
 
 .chosen-items,
-.final-price {
+.total-price {
     padding-left: 30px;
 }
 
@@ -225,11 +224,11 @@ h2, h3 {text-align: center;}
 
     footer.sticky{display: block;}
 
-    aside .final-price {display: none;}
+    aside .total-price {display: none;}
 
     .chosen-items {padding-bottom: 100px;}
 
-    .final-price {
+    .total-price {
         font-size: 1.5rem;
         margin: 20px 0;
     }
@@ -294,8 +293,12 @@ h2, h3 {text-align: center;}
 } 
 
 @media only screen and (max-width: 465px) {
-    .main-header {font-size: 1.3rem;}
+    .main-header {font-size: 1.7rem;}
     .header-image {height: 150px;}
+}
+
+@media only screen and (max-width: 400px) {
+    .main-header {font-size: 1.3rem;}
 }
 
 @media only screen and (max-width: 370px) {

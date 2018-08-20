@@ -148,10 +148,10 @@ h3 {
 .order-header {
   font-weight: 700; }
 
-.final-price {
+.total-price {
   font-weight: 700; }
 
-.final-price-header {
+.total-price-header {
   margin-top: 30px;
   padding-left: 30px; }
 
@@ -428,7 +428,7 @@ h2, h3 {
   padding-bottom: 30px; }
 
 .chosen-items,
-.final-price {
+.total-price {
   padding-left: 30px; }
 
 .padding-left {
@@ -458,11 +458,11 @@ h2, h3 {
     flex-direction: column; }
   footer.sticky {
     display: block; }
-  aside .final-price {
+  aside .total-price {
     display: none; }
   .chosen-items {
     padding-bottom: 100px; }
-  .final-price {
+  .total-price {
     font-size: 1.5rem;
     margin: 20px 0; } }
 
@@ -519,9 +519,13 @@ h2, h3 {
 
 @media only screen and (max-width: 465px) {
   .main-header {
-    font-size: 1.3rem; }
+    font-size: 1.7rem; }
   .header-image {
     height: 150px; } }
+
+@media only screen and (max-width: 400px) {
+  .main-header {
+    font-size: 1.3rem; } }
 
 @media only screen and (max-width: 370px) {
   .header-image {
