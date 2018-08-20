@@ -121,7 +121,6 @@ $(document).ready(function () {
         $(`.total-price`).empty().append(`total price - $${pizzaCost.toFixed(2)}<em>`)
     }
 
-
     $('.pizza-size-clickable').change(function(event) {
         event.preventDefault();
         order.size = $('input[name=pizza-size]:checked').val();
@@ -141,7 +140,6 @@ $(document).ready(function () {
         addItems();
     });
 
-    
     order.vegetables = [];
     $(".pizza-vegetables input[type='checkbox']").click(function () {
         const vegetablesValue = $(this).val();
