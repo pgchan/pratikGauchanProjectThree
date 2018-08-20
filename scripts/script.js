@@ -42,7 +42,6 @@ $(document).ready(function () {
 
     $('.toppings').hide();
     $('.checkout').hide();
-    $('footer').hide();
 
     function addPrice() {
         pizzaCost = 0;
@@ -59,7 +58,7 @@ $(document).ready(function () {
             sizePrice = menu.size[order.size];
             $('.toppings').fadeIn(700);
             $('.checkout').fadeIn(700);
-            $('footer').fadeIn(700);
+            $('footer').addClass('sticky');
         }
         
         // sets price of cheese
@@ -98,28 +97,28 @@ $(document).ready(function () {
         let priceList = "";
 
         priceList = `<li class="order-header">SIZE:</li>`
-        priceList = priceList + `<li>${order.size}</li>`;        
+        priceList = priceList + `<li class="order-item">${order.size}</li>`;        
         
         // prints selected cheese
         priceList = priceList + `<li class="order-header">CHEESE:</li>`
         for (i = 0; i < order.cheese.length; i++) {
-            priceList = priceList + `<li>${order.cheese[i]}</li>`;
+            priceList = priceList + `<li class="order-item">${order.cheese[i]}</li>`;
         }
 
         // prints selected vegetables
         priceList = priceList + `<li class="order-header">VEGETABLES:</li>`
         for (i = 0; i < order.vegetables.length; i++) {
-            priceList = priceList + `<li>${order.vegetables[i]}</li>`;
+            priceList = priceList + `<li class="order-item">${order.vegetables[i]}</li>`;
         }
 
         // prints selected meat
         priceList = priceList + `<li class="order-header">MEAT:</li>`
         for (i = 0; i < order.meat.length; i++) {
-            priceList = priceList + `<li>${order.meat[i]}</li>`;
+            priceList = priceList + `<li class="order-item">${order.meat[i]}</li>`;
         }
 
         $(`ul.chosen-items`).empty().append(priceList);
-        $(`.final-price`).empty().append(`final price - $ ${pizzaCost.toFixed(2)}<em>`)
+        $(`.final-price`).empty().append(`final price - $${pizzaCost.toFixed(2)}<em>`)
     }
 
 

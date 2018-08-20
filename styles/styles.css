@@ -142,6 +142,9 @@ body {
   text-align: center;
   font-weight: 600; }
 
+h3 {
+  color: rgba(0, 0, 0, 0.6); }
+
 .order-header {
   font-weight: 700; }
 
@@ -155,11 +158,10 @@ body {
 footer {
   padding: 5px 0;
   position: fixed;
-  height: 40px;
   margin-bottom: 0;
   bottom: 0;
   width: 100%;
-  background: yellow; }
+  background: #fabe58; }
 
 footer {
   display: none; }
@@ -229,7 +231,7 @@ h2, h3 {
 .inner-header {
   margin-bottom: 20%;
   display: inline-block;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.6);
   font-size: 1.5rem; }
 
 .contents input[type=checkbox] {
@@ -237,6 +239,14 @@ h2, h3 {
 
 .contents:hover {
   cursor: pointer; }
+
+.contents:hover .inner-header {
+  color: #000;
+  border-bottom: 3px solid #000; }
+
+.contents input:checked + .inner-header {
+  color: #000;
+  border-bottom: 3px solid #000; }
 
 .icon {
   height: 120px;
@@ -255,7 +265,7 @@ h2, h3 {
 .contents:hover .small-pizza {
   background-image: url("assets/small-pizza-color.svg"); }
 
-#pizza-small:checked + .small-pizza {
+#pizza-small:checked ~ .small-pizza {
   background-image: url("assets/small-pizza-color.svg"); }
 
 .medium-pizza {
@@ -264,7 +274,7 @@ h2, h3 {
 .contents:hover .medium-pizza {
   background-image: url("assets/medium-pizza-color.svg"); }
 
-#pizza-medium:checked + .medium-pizza {
+#pizza-medium:checked ~ .medium-pizza {
   background-image: url("assets/medium-pizza-color.svg"); }
 
 .large-pizza {
@@ -273,7 +283,7 @@ h2, h3 {
 .contents:hover .large-pizza {
   background-image: url("assets/large-pizza-color.svg"); }
 
-#pizza-large:checked + .large-pizza {
+#pizza-large:checked ~ .large-pizza {
   background-image: url("assets/large-pizza-color.svg"); }
 
 .feta-cheese {
@@ -282,7 +292,7 @@ h2, h3 {
 .contents:hover .feta-cheese {
   background-image: url("assets/feta-color.svg"); }
 
-#feta:checked + .feta-cheese {
+#feta:checked ~ .feta-cheese {
   background-image: url("assets/feta-color.svg"); }
 
 .mozzarella-cheese {
@@ -291,7 +301,7 @@ h2, h3 {
 .contents:hover .mozzarella-cheese {
   background-image: url("assets/mozzarella-color.svg"); }
 
-#mozzarella:checked + .mozzarella-cheese {
+#mozzarella:checked ~ .mozzarella-cheese {
   background-image: url("assets/mozzarella-color.svg"); }
 
 .parmesan-cheese {
@@ -300,7 +310,7 @@ h2, h3 {
 .contents:hover .parmesan-cheese {
   background-image: url("assets/parmesan-color.svg"); }
 
-#parmesan:checked + .parmesan-cheese {
+#parmesan:checked ~ .parmesan-cheese {
   background-image: url("assets/parmesan-color.svg"); }
 
 .pizza-vegetables {
@@ -316,7 +326,7 @@ h2, h3 {
 .contents:hover .vegetables-artichokes {
   background-image: url("assets/artichokes-color.svg"); }
 
-#artichokes:checked + .vegetables-artichokes {
+#artichokes:checked ~ .vegetables-artichokes {
   background-image: url("assets/artichokes-color.svg"); }
 
 .vegetables-broccoli {
@@ -325,7 +335,7 @@ h2, h3 {
 .contents:hover .vegetables-broccoli {
   background-image: url("assets/broccoli-color.svg"); }
 
-#broccoli:checked + .vegetables-broccoli {
+#broccoli:checked ~ .vegetables-broccoli {
   background-image: url("assets/broccoli-color.svg"); }
 
 .vegetables-mushrooms {
@@ -334,7 +344,7 @@ h2, h3 {
 .contents:hover .vegetables-mushrooms {
   background-image: url("assets/mushrooms-color.svg"); }
 
-#mushrooms:checked + .vegetables-mushrooms {
+#mushrooms:checked ~ .vegetables-mushrooms {
   background-image: url("assets/mushrooms-color.svg"); }
 
 .vegetables-olives {
@@ -343,7 +353,7 @@ h2, h3 {
 .contents:hover .vegetables-olives {
   background-image: url("assets/olives-color.svg"); }
 
-#olives:checked + .vegetables-olives {
+#olives:checked ~ .vegetables-olives {
   background-image: url("assets/olives-color.svg"); }
 
 .vegetables-pineapple {
@@ -352,7 +362,7 @@ h2, h3 {
 .contents:hover .vegetables-pineapple {
   background-image: url("assets/pineapple-color.svg"); }
 
-#pineapple:checked + .vegetables-pineapple {
+#pineapple:checked ~ .vegetables-pineapple {
   background-image: url("assets/pineapple-color.svg"); }
 
 .vegetables-tomatoes {
@@ -361,7 +371,7 @@ h2, h3 {
 .contents:hover .vegetables-tomatoes {
   background-image: url("assets/tomatoes-color.svg"); }
 
-#tomatoes:checked + .vegetables-tomatoes {
+#tomatoes:checked ~ .vegetables-tomatoes {
   background-image: url("assets/tomatoes-color.svg"); }
 
 .meat-bacon {
@@ -370,7 +380,7 @@ h2, h3 {
 .contents:hover .meat-bacon {
   background-image: url("assets/bacon-color.svg"); }
 
-#bacon:checked + .meat-bacon {
+#bacon:checked ~ .meat-bacon {
   background-image: url("assets/bacon-color.svg"); }
 
 .meat-chicken {
@@ -379,7 +389,7 @@ h2, h3 {
 .contents:hover .meat-chicken {
   background-image: url("assets/chicken-color.svg"); }
 
-#chicken:checked + .meat-chicken {
+#chicken:checked ~ .meat-chicken {
   background-image: url("assets/chicken-color.svg"); }
 
 .meat-pepperoni {
@@ -388,7 +398,7 @@ h2, h3 {
 .contents:hover .meat-pepperoni {
   background-image: url("assets/pepperoni-color.svg"); }
 
-#pepperoni:checked + .meat-pepperoni {
+#pepperoni:checked ~ .meat-pepperoni {
   background-image: url("assets/pepperoni-color.svg"); }
 
 .checkout .section-header {
@@ -396,7 +406,8 @@ h2, h3 {
   font-size: 1.5rem; }
 
 .chosen-items {
-  list-style: none; }
+  list-style: none;
+  padding-bottom: 30px; }
 
 .chosen-items,
 .final-price {
@@ -407,6 +418,9 @@ h2, h3 {
 
 .order-header {
   border-bottom: 1px solid black; }
+
+.order-item {
+  margin-left: 2%; }
 
 @media only screen and (max-width: 1000px) {
   .icon {
@@ -423,5 +437,49 @@ h2, h3 {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
+  footer.sticky {
+    display: block; }
   aside .final-price {
     display: none; } }
+
+@media only screen and (max-width: 680px) {
+  .section-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 2%;
+    margin: 1%; }
+  .contents:hover .inner-header {
+    border-bottom: none; }
+  .contents [type="radio"]:checked + .inner-header,
+  .contents [type=checkbox]:checked + .inner-header {
+    border-bottom: none; }
+  .pizza-size-price {
+    position: absolute;
+    left: 31%;
+    bottom: 5%; }
+  .inner-header {
+    margin-bottom: 0;
+    border-bottom: none;
+    -ms-flex-preferred-size: 70%;
+    flex-basis: 70%;
+    font-size: 1.6rem;
+    text-align: left; }
+  .icon {
+    margin-bottom: 0;
+    height: 50px;
+    width: 50px; }
+  .vegetables-contents {
+    margin-bottom: 0; } }

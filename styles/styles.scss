@@ -15,10 +15,7 @@ body {
     background: lightyellow;
 }
 
-main {
-    max-width: 1140px;
-    
-}
+main {max-width: 1140px;}
 
 header {
     height: 30vh;
@@ -42,9 +39,7 @@ header {
     padding-right: 30px;
 }
 
-h2, h3 {
-    text-align: center;
-}
+h2, h3 {text-align: center;}
 
 .section-header {
     margin-top: 5%;
@@ -58,9 +53,7 @@ h2, h3 {
     margin-top: 2%;
 }
 
-.main-contents section {
-    margin-bottom: 10%;
-}
+.main-contents section {margin-bottom: 10%;}
 
 // REPEATED PROPERTIES //
 
@@ -74,17 +67,24 @@ h2, h3 {
 .inner-header {
     margin-bottom: 20%;
     display: inline-block;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.6);
     font-size: 1.5rem;
 }
 
-.contents input[type=checkbox] {
-    display: none;
+.contents input[type=checkbox] {display: none;}
+
+.contents:hover {cursor: pointer;}
+
+.contents:hover .inner-header {
+    color: #000;
+    border-bottom: 3px solid #000;
 }
 
-.contents:hover {
-    cursor: pointer;
+.contents input:checked + .inner-header {
+    color: #000;
+    border-bottom: 3px solid #000;
 }
+
 
 .icon {
     height: 120px;
@@ -94,6 +94,8 @@ h2, h3 {
     background-size: contain;  
     margin-bottom: 15px;
 }
+
+
 
 // .icon:hover {
 //     // height: 120px;
@@ -107,9 +109,7 @@ h2, h3 {
 
 // SECTION - pizza size //
 
-.pizza-size-contents input[type=radio] {
-    display: none;
-}
+.pizza-size-contents input[type=radio] {display: none;}
 
 
 
@@ -117,36 +117,36 @@ h2, h3 {
 
 .small-pizza {background-image: url("assets/small-pizza-grayscale.svg");}
 .contents:hover .small-pizza {background-image: url("assets/small-pizza-color.svg");}
-#pizza-small:checked + .small-pizza {
+#pizza-small:checked ~ .small-pizza {
     background-image: url("assets/small-pizza-color.svg");
 }
 
 .medium-pizza {background-image: url("assets/medium-pizza-grayscale.svg");}
 .contents:hover .medium-pizza {background-image: url("assets/medium-pizza-color.svg");}
-#pizza-medium:checked + .medium-pizza {
+#pizza-medium:checked ~ .medium-pizza {
     background-image: url("assets/medium-pizza-color.svg");
 }
 
 
 .large-pizza {background-image: url("assets/large-pizza-grayscale.svg");}
 .contents:hover .large-pizza {background-image: url("assets/large-pizza-color.svg");}
-#pizza-large:checked + .large-pizza {background-image: url("assets/large-pizza-color.svg");}
+#pizza-large:checked ~ .large-pizza {background-image: url("assets/large-pizza-color.svg");}
 
 
 // SECTION - cheese toppings// 
 
 .feta-cheese {background-image: url("assets/feta-grayscale.svg");}
 .contents:hover .feta-cheese {background-image: url("assets/feta-color.svg");}
-#feta:checked + .feta-cheese{background-image: url("assets/feta-color.svg");}
+#feta:checked ~ .feta-cheese{background-image: url("assets/feta-color.svg");}
 
 
 .mozzarella-cheese {background-image: url("assets/mozzarella-grayscale.svg");}
 .contents:hover .mozzarella-cheese {background-image: url("assets/mozzarella-color.svg");}
-#mozzarella:checked + .mozzarella-cheese{background-image: url("assets/mozzarella-color.svg");}
+#mozzarella:checked ~ .mozzarella-cheese{background-image: url("assets/mozzarella-color.svg");}
 
 .parmesan-cheese {background-image: url("assets/parmesan-grayscale.svg");}
 .contents:hover .parmesan-cheese {background-image: url("assets/parmesan-color.svg");}
-#parmesan:checked + .parmesan-cheese{background-image: url("assets/parmesan-color.svg");}
+#parmesan:checked ~ .parmesan-cheese{background-image: url("assets/parmesan-color.svg");}
 
 
 // SECTION -  vegetables // 
@@ -161,42 +161,42 @@ h2, h3 {
 
 .vegetables-artichokes {background-image: url("assets/artichokes-grayscale.svg");}
 .contents:hover .vegetables-artichokes {background-image: url("assets/artichokes-color.svg");}
-#artichokes:checked + .vegetables-artichokes {background-image: url("assets/artichokes-color.svg");}
+#artichokes:checked ~ .vegetables-artichokes {background-image: url("assets/artichokes-color.svg");}
 
 .vegetables-broccoli {background-image: url("assets/broccoli-grayscale.svg");}
 .contents:hover .vegetables-broccoli {background-image: url("assets/broccoli-color.svg");}
-#broccoli:checked + .vegetables-broccoli {background-image: url("assets/broccoli-color.svg");}
+#broccoli:checked ~ .vegetables-broccoli {background-image: url("assets/broccoli-color.svg");}
 
 .vegetables-mushrooms {background-image: url("assets/mushrooms-grayscale.svg");}
 .contents:hover .vegetables-mushrooms {background-image: url("assets/mushrooms-color.svg");}
-#mushrooms:checked + .vegetables-mushrooms {background-image: url("assets/mushrooms-color.svg");}
+#mushrooms:checked ~ .vegetables-mushrooms {background-image: url("assets/mushrooms-color.svg");}
 
 .vegetables-olives {background-image: url("assets/olives-grayscale.svg");}
 .contents:hover .vegetables-olives {background-image: url("assets/olives-color.svg");}
-#olives:checked + .vegetables-olives {background-image: url("assets/olives-color.svg");}
+#olives:checked ~ .vegetables-olives {background-image: url("assets/olives-color.svg");}
 
 .vegetables-pineapple {background-image: url("assets/pineapple-grayscale.svg")}
 .contents:hover .vegetables-pineapple {background-image: url("assets/pineapple-color.svg")}
-#pineapple:checked + .vegetables-pineapple {background-image: url("assets/pineapple-color.svg");}
+#pineapple:checked ~ .vegetables-pineapple {background-image: url("assets/pineapple-color.svg");}
 
 .vegetables-tomatoes {background-image: url("assets/tomatoes-grayscale.svg");}
 .contents:hover .vegetables-tomatoes {background-image: url("assets/tomatoes-color.svg");}
-#tomatoes:checked + .vegetables-tomatoes {background-image: url("assets/tomatoes-color.svg");}
+#tomatoes:checked ~ .vegetables-tomatoes {background-image: url("assets/tomatoes-color.svg");}
 
 
 // SECTION - MEAT //
 
 .meat-bacon {background-image: url("assets/bacon-grayscale.svg")}
 .contents:hover .meat-bacon {background-image: url("assets/bacon-color.svg")}
-#bacon:checked + .meat-bacon {background-image: url("assets/bacon-color.svg")}
+#bacon:checked ~ .meat-bacon {background-image: url("assets/bacon-color.svg")}
 
 .meat-chicken {background-image: url("assets/chicken-grayscale.svg")}
 .contents:hover .meat-chicken {background-image: url("assets/chicken-color.svg")}
-#chicken:checked + .meat-chicken {background-image: url("assets/chicken-color.svg")}
+#chicken:checked ~ .meat-chicken {background-image: url("assets/chicken-color.svg")}
 
 .meat-pepperoni {background-image: url("assets/pepperoni-grayscale.svg")}
 .contents:hover .meat-pepperoni {background-image: url("assets/pepperoni-color.svg")}
-#pepperoni:checked + .meat-pepperoni {background-image: url("assets/pepperoni-color.svg")}
+#pepperoni:checked ~ .meat-pepperoni {background-image: url("assets/pepperoni-color.svg")}
 
 
 // ASIDE //
@@ -208,6 +208,7 @@ h2, h3 {
 
 .chosen-items {
     list-style: none;
+    padding-bottom: 30px;
 }
 
 .chosen-items,
@@ -223,6 +224,23 @@ h2, h3 {
     border-bottom: 1px solid black;
 }
 
+.order-item {
+    margin-left: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -235,24 +253,65 @@ h2, h3 {
         height: 90px;
         width: 90px;
     }
-    .inner-header {
-        font-size: 1.25rem;
-    }
+    .inner-header {font-size: 1.25rem;}
 
-    .section-header {
-        font-size: 1.5rem;
-    }
-    
+    .section-header {font-size: 1.5rem;}
 }
 
 
 @media only screen and (max-width: 900px) {
     .wrapper {flex-direction: column;}
 
-    footer {
-        // display: block;
-        
-    }
+    footer.sticky{display: block;}
 
     aside .final-price {display: none;}
 }
+
+
+@media only screen and (max-width: 680px) {
+    
+    .section-body {flex-direction: column;}
+    
+    .contents {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 2%;
+        margin: 1%;
+    }
+
+    .contents:hover .inner-header {
+        border-bottom: none;
+    }
+
+    .contents [type="radio"]:checked  + .inner-header, 
+    .contents [type=checkbox]:checked + .inner-header {
+        border-bottom: none;
+    }
+
+    .pizza-size-price {
+        position: absolute;
+        left: 31%;
+        bottom: 5%;
+    }
+
+    .inner-header {
+        margin-bottom: 0;
+        border-bottom: none;
+        flex-basis: 70%;
+        font-size: 1.6rem;
+        text-align: left;
+    }
+
+    .icon {
+        margin-bottom: 0;
+        height: 50px;
+        width: 50px;
+    }
+
+
+    .vegetables-contents {
+        margin-bottom: 0;
+    }
+
+} 
